@@ -68,11 +68,11 @@ def compute_error(f: sp.Matrix, x: sp.Matrix, values: np.ndarray) -> float:
 
     return np.linalg.norm(nums)
 
-def maximum_block_improvement(
+def block_coordinate_descent_method(
         xk: np.ndarray,
         tol: float
     ) -> Tuple[np.ndarray, List[float]]:
-    """Performs the Maximum Block Improvement (MBI) algorithm to find the
+    """Performs the Block Coordinate Descent (BCD) algorithm to find the
     minimum of a quadratic function.
 
     Args:
@@ -154,7 +154,7 @@ if __name__ == '__main__':
     x: np.ndarray = np.ones(N)
 
     # Perform the Maximum Block Improvement algorithm
-    xk, error = maximum_block_improvement(x, tol)
+    xk, error = block_coordinate_descent_method(x, tol)
     print(f'x value is {xk}')
     
     # Create an array of iteration numbers
