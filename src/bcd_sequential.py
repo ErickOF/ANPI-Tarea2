@@ -137,7 +137,7 @@ def plot_error(k: np.ndarray, error: List[float]) -> None:
         k (np.ndarray): Array of iteration numbers.
         error (List[float]): List of error values for each iteration.
     """
-    plt.title('Sequential MBI')
+    plt.title('Sequential BCD')
     plt.xlabel('Iteration (k)')
     plt.ylabel('Error')
     plt.grid()
